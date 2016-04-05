@@ -4,6 +4,7 @@
       %thead
         %tr
           %th.qty= t('shoppe.orders.qty')
+          %th.size= t('shoppe.orders.size')
           %th= t('shoppe.orders.item')
           %th= t('shoppe.orders.sku')
           %th.money= t('shoppe.orders.cost')
@@ -14,6 +15,7 @@
         - for item in @order.order_items
           %tr
             %td.qty= item.quantity
+            %td.size= item.size
             %td.product= item.ordered_item.full_name
             %td.sku= item.ordered_item.sku
             %td.money= number_to_currency item.total_cost
