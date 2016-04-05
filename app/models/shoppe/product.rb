@@ -66,7 +66,7 @@ module Shoppe
       if attrs['data_sheet']['file'].present? then attachments.build(attrs['data_sheet']) end
 
       if attrs['extra']['file'].present? then attrs['extra']['file'].each { |attr| attachments.build(file: attr, parent_id: attrs['extra']['parent_id'], parent_type: attrs['extra']['parent_type']) } end
-      if attrs['image']['file'].present? then attrs['extra']['file'].each { |attr| attachments.build(file: attr, parent_id: attrs['extra']['parent_id'], parent_type: attrs['extra']['parent_type']) } end
+      #if attrs['image']['file'].present? then attrs['image']['file'].each { |attr| attachments.build(file: attr, parent_id: attrs['image']['parent_id'], parent_type: attrs['image']['parent_type']) } end
 
     end
 
@@ -144,7 +144,7 @@ module Shoppe
       attachments.for('extra')
     end
 
-    
+
 
     # Search for products which include the given attributes and return an active record
     # scope of these products. Chainable with other scopes and with_attributes methods.
