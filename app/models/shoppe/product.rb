@@ -144,6 +144,8 @@ module Shoppe
       attachments.for('extra')
     end
 
+    
+
     # Search for products which include the given attributes and return an active record
     # scope of these products. Chainable with other scopes and with_attributes methods.
     # For example:
