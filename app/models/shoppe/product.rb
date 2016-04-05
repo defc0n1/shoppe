@@ -140,6 +140,11 @@ module Shoppe
       attachments.for('image')
     end
 
+    def extra_image_file=(file)
+      attachments.build(file: file, role: 'extra')
+
+    end
+
     def extra
       attachments.for('extra')
     end
