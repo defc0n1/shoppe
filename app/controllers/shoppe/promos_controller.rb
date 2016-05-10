@@ -3,7 +3,7 @@ module Shoppe
     before_filter { @active_nav = :promos }
 
     def index
-    
+    @promos = Shoppe::Promo.all.order(:title)
     end
 
 
