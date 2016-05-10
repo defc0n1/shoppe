@@ -7,13 +7,13 @@
     = csrf_meta_tags
     :javascript
       window.Shoppe = {}
-      window.Shoppe.currencyUnit = "#{h Shoppe.settings.currency_unit}";
+      window.Shoppe.currencyUnit = "#{ Shoppe.settings.currency_unit}";
   %body
     %nav.sidebar
       %header.logo
-        // %h1= link_to "Shoppe", root_path
-        // %p v#{Shoppe::VERSION}
-      //%p.logged= t('.logged_in_as', user_name: current_user.full_name)
+        %h1= link_to "Shoppe", root_path
+        %p v#{Shoppe::VERSION}
+      %p.logged= t('.logged_in_as', user_name: current_user.full_name)
 
       %ul
         - for item in Shoppe::NavigationManager.find(:admin_primary).items
