@@ -40,6 +40,9 @@ en:
       shoppe/user:
         one: User
         other: Users
+      shoppe/promo:
+        one: Promo
+        other: Promos
 
     attributes:
       shoppe/order:
@@ -736,6 +739,7 @@ en:
         users: Users
         countries: Countries
         settings: Settings
+        promos: Promos
 
     settings:
 
