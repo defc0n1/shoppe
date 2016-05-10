@@ -42,3 +42,4 @@ module Shoppe
       code
     end
 end
+end
