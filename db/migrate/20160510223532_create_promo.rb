@@ -1,4 +1,4 @@
-class CreatePromos < ActiveRecord::Migration
+class CreatePromo < ActiveRecord::Migration
   def change
     create_table :shoppe_promo do |t|
       t.string :title
@@ -14,3 +14,5 @@ class CreatePromos < ActiveRecord::Migration
     end
   end
 end
+
+
