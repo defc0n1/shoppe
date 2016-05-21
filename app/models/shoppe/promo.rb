@@ -41,5 +41,5 @@ module Shoppe
     def sku
       code
     end
-end
+  end 
 end
