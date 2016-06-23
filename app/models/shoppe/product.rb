@@ -8,6 +8,8 @@ module Shoppe
     # Add dependencies for products
     require_dependency 'shoppe/product/product_attributes'
     require_dependency 'shoppe/product/variants'
+    
+    serialize :sizes
 
     # Attachments for this product
     has_many :attachments, as: :parent, dependent: :destroy, autosave: true, class_name: 'Shoppe::Attachment'

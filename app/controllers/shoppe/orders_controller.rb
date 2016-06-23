@@ -111,7 +111,7 @@ module Shoppe
         :delivery_price, :delivery_service_id, :delivery_tax_amount,
         :email_address, :phone_number,
         :notes,
-        order_items_attributes: [:ordered_item_id, :ordered_item_type, :quantity, :size, :unit_price, :tax_amount, :id, :weight]
+        order_items_attributes: [:ordered_item_id, :ordered_item_type, :order_item_size, :quantity, :size, :unit_price, :tax_amount, :id, :weight]
       )
     end
   end

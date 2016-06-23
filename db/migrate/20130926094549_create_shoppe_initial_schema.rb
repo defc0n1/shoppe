@@ -38,6 +38,7 @@ class CreateShoppeInitialSchema < ActiveRecord::Migration
       t.integer  'order_id'
       t.integer  'ordered_item_id'
       t.string   'ordered_item_type'
+      t.string   "ordered_item_size"
       t.integer  'quantity', default: 1
       t.decimal  'unit_price',        precision: 8, scale: 2
       t.decimal  'unit_cost_price',   precision: 8, scale: 2
