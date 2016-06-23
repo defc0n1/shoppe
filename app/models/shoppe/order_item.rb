@@ -44,11 +44,11 @@ module Shoppe
     def self.add_item(ordered_item, quantity = 1, size)
       fail Errors::UnorderableItem, ordered_item: ordered_item unless ordered_item.orderable?
       transaction do
-        if existing = self.where(:ordered_item_id => ordered_item.id, :ordered_item_type => ordered_item.class.to_s, :ordered_item_size => size).first
+        if existing = self.where(:ordered_item_id => ordered_item.id, :ordered_item_type => ordered_item.class.to_s, :size => size).first
           existing.increase!(quantity)
           existing
         else
-          new_item = self.create(:ordered_item => ordered_item,  :ordered_item_size => size, :quantity => 0)
+          new_item = self.create(:ordered_item => ordered_item,  :size => size, :quantity => 0)
 
           new_item.increase!(quantity)
           new_item
