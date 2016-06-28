@@ -1,16 +1,15 @@
-Hello <%=@order.first_name%>!
+Hallo <%=@order.first_name%>!
 
-Re: Order #<%=@order.number%>
+Re: Bestellung #<%=@order.number%>
 
-We're pleased to let you know your order has been shipped and
-will be with you shortly!
+Wir freuen uns dir mitzuteilen, dass deine Bestellung versendet wurde.
 
 <% if @order.delivery_service && @order.courier_tracking_url -%>
-You can track the delivery online at:
+Du kannst deine Bestellung hier verfolgen:
 <%=@order.courier_tracking_url%>
 <% end -%>
 
-Many thanks,
+Vielen Dank,
 
 <%=Shoppe.settings.store_name%>
 <%=Shoppe.settings.email_address%>
